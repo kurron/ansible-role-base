@@ -31,9 +31,7 @@ galaxy_info:
     - xenial
 
   galaxy_tags:
-      - jdk
-      - jvm
-      - java
+      - python
 
 dependencies: []
   # List your role dependencies here, one per line.

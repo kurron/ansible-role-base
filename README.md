@@ -11,7 +11,7 @@ TODO
 Role Variables
 --------------
 
-TODO
+* base_software_directory: Software
 
 Dependencies
 ------------
