@@ -21,4 +21,5 @@
       recurse: yes
   with_items:
   - "{{ansible_user_dir}}/{{base_software_directory}}"
+  - "{{ansible_user_dir}}/{{base_download_directory}}"
 

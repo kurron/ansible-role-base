@@ -12,6 +12,7 @@ Role Variables
 --------------
 
 * base_software_directory: Software
+* base_download_directory: Downloads
 
 Dependencies
 ------------
