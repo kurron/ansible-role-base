@@ -1,6 +1,13 @@
 ---
 - name: Install Required Packages
   become: yes
+  yum:
+      name: python-dnf
+      state: present
+  when: ansible_distribution == "Fedora"
+
+- name: Install Required Packages
+  become: yes
   package:
       name: "{{item}}"
       state: present
