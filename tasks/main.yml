@@ -1,10 +1,19 @@
 ---
 - name: Install Required Packages
   become: yes
-  yum:
-      name: python-dnf
-      state: present
+  command: "/usr/bin/dnf -y install python-dnf"
   when: ansible_distribution == "Fedora"
+
+- name: Install Required Packages
+  become: yes
+  package:
+      name: "{{item}}"
+      state: present
+  with_items:
+  - "apt-transport-https"
+  - "python-apt"
+  - "python-dev"
+  when: ansible_distribution == "Ubuntu"
 
 - name: Install Required Packages
   become: yes
@@ -14,10 +23,7 @@
   with_items:
   - "curl"
   - "ca-certificates"
-  - "apt-transport-https"
-  - "python-apt"
   - "python-pip"
-  - "python-dev"
 
 - name: Create Common Folders
   become: no
