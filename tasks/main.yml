@@ -1,4 +1,15 @@
 ---
+- name: Create Common Folders
+  become: no
+  file:
+      path: "{{item}}"
+      state: directory
+      mode: 0755
+      recurse: yes
+  with_items:
+  - "{{ansible_user_dir}}/{{base_software_directory}}"
+  - "{{ansible_user_dir}}/{{base_download_directory}}"
+
 - name: Download PIP
   become: no
   get_url:
@@ -47,15 +58,4 @@
   with_items:
   - "curl"
   - "ca-certificates"
-
-- name: Create Common Folders
-  become: no
-  file:
-      path: "{{item}}"
-      state: directory
-      mode: 0755
-      recurse: yes
-  with_items:
-  - "{{ansible_user_dir}}/{{base_software_directory}}"
-  - "{{ansible_user_dir}}/{{base_download_directory}}"
 
