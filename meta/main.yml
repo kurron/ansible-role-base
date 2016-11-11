@@ -1,6 +1,6 @@
 galaxy_info:
   author: Ronald D. Kurr
-  description: common plays used in many of my roles. 
+  description: common plays used in many of my roles.
   company: jvmguy.com
 
   license: Apache 2
@@ -13,6 +13,9 @@ galaxy_info:
   - name: Fedora
     versions:
     - 24
+  - name: RedHat
+    versions:
+    - Maipo
   - name: Ubuntu
     versions:
   #  - all
