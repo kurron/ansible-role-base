@@ -43,6 +43,7 @@
       name: "{{item}}"
       state: present
   with_items:
+  - "unzip"
   - "apt-transport-https"
   - "python-apt"
   - "python-dev"
