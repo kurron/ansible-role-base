@@ -9,6 +9,7 @@
   with_items:
   - "{{ansible_user_dir}}/{{base_software_directory}}"
   - "{{ansible_user_dir}}/{{base_download_directory}}"
+  - "{{ansible_user_dir}}/Desktop"
 
 - name: Activate Extra Packages for Enterprise Linux (EPEL)
   become: yes
