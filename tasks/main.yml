@@ -7,9 +7,9 @@
       mode: 0755
       recurse: yes
   with_items:
-  - "{{ansible_user_dir}}/{{base_software_directory}}"
-  - "{{ansible_user_dir}}/{{base_download_directory}}"
-  - "{{ansible_user_dir}}/Desktop"
+  - "{{base_user_directory}}/{{base_software_directory}}"
+  - "{{base_user_directory}}/{{base_download_directory}}"
+  - "{{base_user_directory}}/Desktop"
 
 - name: Activate Extra Packages for Enterprise Linux (EPEL)
   become: yes
@@ -22,13 +22,13 @@
   become: no
   get_url:
       url: "https://bootstrap.pypa.io/get-pip.py"
-      dest: "{{ansible_user_dir}}/{{base_download_directory}}/get-pip.py"
+      dest: "{{base_user_directory}}/{{base_download_directory}}/get-pip.py"
       mode: 0554
   when: ansible_distribution == "CentOS"
 
 - name: Run PIP Installer
   become: yes
-  command: "python {{ansible_user_dir}}/{{base_download_directory}}/get-pip.py"
+  command: "python {{base_user_directory}}/{{base_download_directory}}/get-pip.py"
   args:
       creates: "/usr/bin/pip"
   when: ansible_distribution == "CentOS"
