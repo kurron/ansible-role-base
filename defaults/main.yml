@@ -1,4 +1,3 @@
 ---
-base_user_directory: "{{ansible_user_dir}}"
 base_software_directory: Software
 base_download_directory: Downloads
