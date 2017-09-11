@@ -19,7 +19,7 @@
 - name: Activate Extra Packages for Enterprise Linux (EPEL)
   become: yes
   yum:
-      name: "http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm"
+      name: "http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-10.noarch.rpm"
       state: present
   when: ansible_distribution == "RedHat"
 
