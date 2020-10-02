@@ -52,7 +52,7 @@
   - "apt-transport-https"
   - "python-apt"
   - "python-dev"
-  when: ansible_distribution == "Ubuntu"
+  when: ansible_distribution == "UbuntuXXXX"
 
 - name: Install Required Packages
   become: yes
