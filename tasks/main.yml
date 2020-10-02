@@ -61,7 +61,7 @@
       state: present
   loop:
   - "python-pip"
-  when: ansible_distribution -= "never"
+  when: ansible_distribution == "never"
   #when: ansible_distribution != "CentOS"
 
 - name: Install Required Packages
